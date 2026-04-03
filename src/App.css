@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #fefefe2c; 
+  /* background-image: url('./assets/smarttrolly5.jpg');  */
+  /* backdrop-filter: blur(10px); */
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  color: #f4f4f4;
+  
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the app takes the full viewport height */
+}
+
+.App-header {
+  display: flex; /* Use flexbox to align items */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+  background-color: rgba(36, 90, 171, 0.955);
+  padding: 5px;
+  color: rgb(255, 255, 255);
+}
+
+.header-title{
+  margin: 0;
+  font-size: 2.9rem;
+  font-family: Georgia;
+  margin-right: auto ;
+  
+}
+.header-faq {
+  margin: 0;
+  font-size: 1.6rem; 
+  margin-left: 30px;
+}
+.header-cart {
+  font-size: 1.6rem; 
+  margin-left: auto; 
+  cursor: pointer; 
+}
+
+.App-main {
+  flex-grow: 1; /* Allow the main content to grow and push the footer down */
+  padding: 20px;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-section {
+  flex: 2;
+  margin-right: 20px;
+}
+
+.summary-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px; /* Add margin to create a gap */
+}
+
+.total-price,
+.qr-code {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px); 
+  -webkit-backdrop-filter: blur(5px);
+  margin-bottom: 20px;
+}
+
+.total-price h2,
+.qr-code h3 {
+  margin: 0;
+  color: #000000;
+}
+
+.App-footer {
+  background-color: #000000;
+  padding: 5px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  clear: both;
+  position: relative; /* Changed to relative */
+  bottom: 0;
+  width: 100%;
+}
+
+.App-footer p {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 5px;
+  margin: 0;
+}
+
+.pay-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgba(36, 90, 171, 0.955);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.pay-button:hover {
+    background-color: #218838;
+}
+
+.total-price-container {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+.refresh-scanner-button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #6c7d90;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.refresh-scanner-button:hover {
+    background-color: #0056b3;
+}

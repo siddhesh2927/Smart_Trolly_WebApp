@@ -1,0 +1,112 @@
+.product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.product-list-heading {
+    background-color: rgba(255, 255, 255, 0.5); /* Light gray background */
+    padding: 5px; /* Padding around the text */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px; /* Slightly rounded corners */
+    text-align: center; /* Center the text */
+    font-size: 24px; /* Larger font size for the heading */
+    font-weight: bold; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); 
+   -webkit-backdrop-filter: blur(10px);
+    margin-bottom: 10px; 
+    width: 81%;  
+    
+}
+.product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+.product-name {
+    font-weight: bold;
+    flex: 1;
+    text-align: left;
+}
+
+.product-price {
+    color: #28a745;
+    font-size: 18px;
+    text-align: center;
+    min-width: 100px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.increase {
+    background-color: #979aab;
+    color: white;
+}
+
+.decrease {
+    background-color: #979aab;
+    color: white;
+}
+
+.edit {
+    background: linear-gradient(90deg, #ffc107, #ffca2c);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.edit:hover {
+    background: linear-gradient(90deg, #ffca2c, #ffc107);
+    transform: scale(1.05);
+}
+
+.delete {
+    background: linear-gradient(90deg, #dc3545, #ff6b6b);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.delete:hover {
+    background: linear-gradient(90deg, #ff6b6b, #dc3545);
+    transform: scale(1.05);
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.icon {
+    font-size: 18px;
+}
+
+.quantity-controls {
+    margin-top: 10px;
+}
