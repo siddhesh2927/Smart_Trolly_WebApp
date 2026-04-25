@@ -4,7 +4,7 @@ The **Smart Trolley** is an innovative retail solution designed to streamline th
 
 ---
 
-### 🎨 Frontend
+###  Frontend
 The frontend is a modern web application designed for a seamless user experience.
 
 - **Framework**: **React.js**
@@ -14,7 +14,7 @@ The frontend is a modern web application designed for a seamless user experience
   - `Axios`: Used for robust API communication.
 - **Styling**: **Vanilla CSS** for clean, custom interface design (located in `src/styles`).
 
-### ⚙️ Backend
+###  Backend
 The backend provides a secure and efficient API for data management.
 
 - **Language**: **PHP**
@@ -26,7 +26,7 @@ The backend provides a secure and efficient API for data management.
   - `fetch_products.php`: Dynamic retrieval of product details.
   - `admin_functions.php`: Specialized logic for administrative management.
 
-### 🔄 Communication
+### Communication
 The frontend and backend bridge are built on standard web protocols:
 - **Protocol**: HTTP/HTTPS
 - **Method**: RESTful API requests via `fetch` or `Axios`.
