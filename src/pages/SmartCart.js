@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import "../styles/SmartCart.css";
+import "../styles/global.css";
 import ProductList from '../component/ProductList';
 import BarcodeScanner from '../components/BarcodeScanner';
 import { QRCodeCanvas } from 'qrcode.react';

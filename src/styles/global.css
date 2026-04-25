@@ -1,36 +1,18 @@
-/* Global CSS Variables for consistent styling across pages */
+
+/* Unified Clean Theme for SmartTrolly */
 :root {
-  /* Color Palette */
-  --primary: #00f7ff;
-  --primary-glow: rgba(0, 247, 255, 0.5);
-  --secondary: #ff00e5;
-  --secondary-glow: rgba(255, 0, 229, 0.5);
-  --background-dark: #050a18;
-  --background-light: #0a1128;
-  --text-light: #ffffff;
-  --text-dim: rgba(255, 255, 255, 0.7);
-  --glass-bg: rgba(10, 17, 40, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.1);
-
-  /* Typography */
-  --font-main: "Rajdhani", "Segoe UI", Roboto, sans-serif;
-  --font-secondary: "Orbitron", "Segoe UI", Roboto, sans-serif;
-
-  /* Spacing */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 2rem;
-  --spacing-lg: 4rem;
-
-  /* Borders & Shadows */
-  --border-radius-sm: 4px;
-  --border-radius-md: 8px;
-  --border-radius-lg: 16px;
-  --glow-shadow: 0 0 15px var(--primary-glow);
-  --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --primary: #0078d4;
+  --primary-light: #e6f0fa;
+  --background: #f7f9fb;
+  --surface: #fff;
+  --text: #222;
+  --text-light: #fff;
+  --border: #e0e0e0;
+  --radius: 10px;
+  --shadow: 0 2px 8px rgba(0,0,0,0.06);
+  --font-main: 'Segoe UI', 'Roboto', Arial, sans-serif;
 }
 
-/* Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -39,152 +21,96 @@
 
 body {
   font-family: var(--font-main);
-  background: linear-gradient(135deg, var(--background-dark), var(--background-light));
-  color: var(--text-light);
-  line-height: 1.6;
+  background: var(--background);
+  color: var(--text);
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-secondary);
+h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
-  margin-bottom: var(--spacing-sm);
-  letter-spacing: 1px;
-}
-
-p {
-  margin-bottom: var(--spacing-sm);
+  color: var(--primary);
+  margin-bottom: 0.5em;
 }
 
 a {
+  color: var(--primary);
   text-decoration: none;
-  color: var(--text-light);
-  transition: all 0.3s ease;
+  transition: color 0.2s;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 ul {
   list-style: none;
 }
 
-/* Reusable Components */
-.glass-panel {
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--border-radius-md);
-  padding: var(--spacing-md);
-  box-shadow: var(--box-shadow);
+.container, .admin-container, .homepage-container, .auth-container, .App {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
 }
 
-.neon-border {
-  position: relative;
-  border-radius: var(--border-radius-md);
-  overflow: hidden;
-}
-
-.neon-border::before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(45deg, var(--primary), var(--secondary), var(--primary));
-  z-index: -1;
-  border-radius: var(--border-radius-md);
-  animation: border-animation 3s linear infinite;
-}
-
-.futuristic-button {
-  background: transparent;
+.button, button, input[type="submit"] {
+  background: var(--primary);
   color: var(--text-light);
-  border: 1px solid var(--primary);
-  border-radius: var(--border-radius-md);
-  padding: 0.75rem 1.5rem;
-  font-family: var(--font-secondary);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.5em 1.2em;
   font-size: 1rem;
-  letter-spacing: 1px;
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  z-index: 1;
+  margin: 0.2em;
+  transition: background 0.2s;
+}
+.button:hover, button:hover, input[type="submit"]:hover {
+  background: #005fa3;
 }
 
-.futuristic-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
+input, select, textarea {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.5em;
+  font-size: 1rem;
+  margin-bottom: 1em;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, var(--primary-glow), transparent);
-  transition: all 0.4s ease;
-  z-index: -1;
 }
 
-.futuristic-button:hover {
-  box-shadow: var(--glow-shadow);
-  transform: translateY(-2px);
+.product-list, .product-item, .barcode-scanner-container {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1em;
+  margin-bottom: 1em;
 }
 
-.futuristic-button:hover::before {
-  left: 100%;
+.product-list-heading {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 1em;
 }
 
-.section-title {
-  position: relative;
-  display: inline-block;
-  margin-bottom: var(--spacing-md);
-  padding-bottom: var(--spacing-xs);
+.main-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary-light);
+  padding: 1em 2em;
+  border-radius: var(--radius);
+  margin-bottom: 2em;
 }
 
-.section-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50%;
-  height: 2px;
-  background: linear-gradient(90deg, var(--primary), transparent);
+.nav-link {
+  color: var(--primary);
+  margin: 0 1em;
+  font-weight: 500;
 }
 
-/* Animations */
-@keyframes border-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.6;
-  }
+/* Utility */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

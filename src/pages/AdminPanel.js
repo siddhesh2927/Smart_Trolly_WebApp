@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/AdminPanel.css'; // Add your styles here
+import '../styles/global.css';
 
 function AdminPanel() {
     const [users, setUsers] = useState([]);
